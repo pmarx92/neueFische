@@ -6,3 +6,7 @@ Delete Branch: git branch -D < branchName ./>
 
 Change Branch: git switch < brachName ./>
 
+## Branches Names:
+
+- feature/ newButton
+- bugFix/ example
