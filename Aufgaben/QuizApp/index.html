@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="js.js" defer></script>
     <title>Quiz App</title>
 </head>
 
@@ -18,13 +19,17 @@
         <section class="quiz-section">
             <div class="quiz-card">
                 <div class="quiz-card-icon">
-                    <a href=""><i class="fa fa-bookmark-o" style="font-size:36px;"></i></a>
+                    <svg height="40" width="40" class="quiz-card--active" data-js="bookmark">
+                        <polygon points="0,0 40,0 40,40 20,20 0,40"  />
+                    </svg>
                 </div>
                 <div class="quiz-card-question">
-                    <h2>
+                    <h1>
                         What property flips the axes in flexbox?
-                    </h2>
-                    <button>Show Answer</button>
+                    </h1>
+                    <p class="quiz-card__answer--hidden" data-js="answer">Answer 1</p>
+
+                    <button class="quiz-card-button" data-js="showAnswer">Show Answer</button>
                 </div>
                 <div class="quiz-card-bookmark">
                     <a href="#html">#html</a>
@@ -36,14 +41,18 @@
         <section class="quiz-section">
             <div class="quiz-card">
                 <div class="quiz-card-icon">
-                    <a href=""><i class="fa fa-bookmark-o" style="font-size:36px;color:red"></i></a>
+                    <svg height="40" width="40" class="quiz-card--active" data-js="bookmark">
+                        <polygon points="0,0 40,0 40,40 20,20 0,40" />
+                    </svg>
+
                 </div>
 
                 <div class="quiz-card-question">
                     <h2>
                         What property flips the axes in flexbox?
                     </h2>
-                    <button>Show Answer</button>
+                    <p class="quiz-card__answer--hidden" data-js="answer">Answer 2</p>
+                    <button class="quiz-card-button" data-js="showAnswer">Show Answer</button>
                 </div>
                 <div class="quiz-card-bookmark">
                     <a href="#html">#html</a>
@@ -54,24 +63,29 @@
         </section>
     </main>
     <footer>
-        <nav>
+   
             <ul>
                 <a href="index.html">
                     <li>
-                        <i class="fa fa-home" style="font-size:42px; color:white;"></i>
+                        <i class="fa fa-home" style="font-size:36px; color:white;"></i>
                     </li>
                 </a>
                 <a href="bookmark.html">
-                    <li><i class="fa fa-bookmark-o" style="font-size:42px; color:white;"></i>
+                    <li><i class="fa fa-bookmark-o" style="font-size:36px; color:white;"></i>
                     </li>
                 </a>
                 <a href="profil.html">
                     <li>
-                        <i class="fa fa-user" style="font-size:42px; color:white;"></i>
+                        <i class="fa fa-user" style="font-size:36px; color:white;"></i>
+                    </li>
+                </a>
+                <a href="form.html">
+                    <li>
+                        <i class="fas fa-angle-double-right" style="font-size:36px; color:white;"></i>
                     </li>
                 </a>
             </ul>
-        </nav>
+
     </footer>
 </body>
 
