@@ -26,7 +26,8 @@
   
 }
 .quiz-card-question__headline {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 .quiz-card-bookmark {
   display: flex;
