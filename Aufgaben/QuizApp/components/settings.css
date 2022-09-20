@@ -1,0 +1,15 @@
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    margin: 5rem auto;
+}
+.settings p {
+    padding-top: 20px;
+}
+.settings button {
+    padding: 5px;
+    margin-left: 10px;
+}

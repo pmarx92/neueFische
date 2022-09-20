@@ -1,0 +1,14 @@
+form {
+    padding: 20px;
+}
+fieldset {
+    background-color: lightgray;
+}
+.textarea {
+    margin: 10px;
+    background-color: lightgray;
+}
+form button {
+    margin-top: 20px;
+    padding: 6px;
+}

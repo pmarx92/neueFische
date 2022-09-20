@@ -1,0 +1,24 @@
+footer {
+  min-height: 80px;
+  margin: 0 auto;
+  background-color: #202020;
+  margin-top: 19rem;
+  border: 1px solid green;
+}
+fieldset {
+    width: 45%;
+}
+.footer-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0 auto;
+  gap: 2px;
+}
+.footer-navigation__link {
+  text-decoration: none;
+  width: 100%;
+}

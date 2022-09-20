@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header-headline">
         <h1>Quiz App</h1>
     </header>
     <main>
@@ -20,17 +20,12 @@
             <div class="quiz-card">
                 <div class="quiz-card-icon">
                     <svg height="40" width="40" class="quiz-card--active" data-js="bookmark">
-                        <polygon points="0,0 40,0 40,40 20,20 0,40"  />
+                        <polygon points="0,0 40,0 40,40 20,20 0,40" />
                     </svg>
                 </div>
-                <div class="quiz-card-question">
-                    <h1>
-                        What property flips the axes in flexbox?
-                    </h1>
-                    <p class="quiz-card__answer--hidden" data-js="answer">Answer 1</p>
-
-                    <button class="quiz-card-button" data-js="showAnswer">Show Answer</button>
+                <div class="quiz-card-question" data-js="questionCard">
                 </div>
+                <button class="quiz-card-button" data-js="showAnswer">Show Answer</button>
                 <div class="quiz-card-bookmark">
                     <a href="#html">#html</a>
                     <a href="#flexbox">#flexbox</a>
@@ -38,54 +33,32 @@
                 </div>
             </div>
         </section>
-        <section class="quiz-section">
-            <div class="quiz-card">
-                <div class="quiz-card-icon">
-                    <svg height="40" width="40" class="quiz-card--active" data-js="bookmark">
-                        <polygon points="0,0 40,0 40,40 20,20 0,40" />
-                    </svg>
-
-                </div>
-
-                <div class="quiz-card-question">
-                    <h2>
-                        What property flips the axes in flexbox?
-                    </h2>
-                    <p class="quiz-card__answer--hidden" data-js="answer">Answer 2</p>
-                    <button class="quiz-card-button" data-js="showAnswer">Show Answer</button>
-                </div>
-                <div class="quiz-card-bookmark">
-                    <a href="#html">#html</a>
-                    <a href="#flexbox">#flexbox</a>
-                    <a href="#css">#css</a>
-                </div>
-            </div>
+        <section class="quiz-section" data-js="cardSection">
+        
         </section>
     </main>
     <footer>
-   
-            <ul>
-                <a href="index.html">
-                    <li>
-                        <i class="fa fa-home" style="font-size:36px; color:white;"></i>
-                    </li>
-                </a>
-                <a href="bookmark.html">
-                    <li><i class="fa fa-bookmark-o" style="font-size:36px; color:white;"></i>
-                    </li>
-                </a>
-                <a href="profil.html">
-                    <li>
-                        <i class="fa fa-user" style="font-size:36px; color:white;"></i>
-                    </li>
-                </a>
-                <a href="form.html">
-                    <li>
-                        <i class="fas fa-angle-double-right" style="font-size:36px; color:white;"></i>
-                    </li>
-                </a>
-            </ul>
-
+        <ul class="footer-navigation">
+            <a href="index.html" class="footer-navigation__link">
+                <li>
+                    <i class="fa fa-home" style="font-size:30px; color:white;"></i>
+                </li>
+            </a>
+            <a href="bookmark.html" class="footer-navigation__link">
+                <li><i class="fa fa-bookmark-o" style="font-size:30px; color:white;"></i>
+                </li>
+            </a>
+            <a href="profil.html" class="footer-navigation__link">
+                <li>
+                    <i class="fa fa-user" style="font-size:30px; color:white;"></i>
+                </li>
+            </a>
+            <a href="form.html" class="footer-navigation__link">
+                <li>
+                    <i class="fas fa-angle-double-right" style="font-size:30px; color:white;"></i>
+                </li>
+            </a>
+        </ul>
     </footer>
 </body>
 

@@ -1,20 +1,39 @@
+.header-headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90px;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 1);
+  margin-bottom: 3px;
+  background-color: lightgreen;
+}
+
 .person-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: #313131;
-    height: 300px;
-  }
-  .person-section img {
-    box-shadow: 0 1px 5px #313131;
-    border-radius: 50%;
-  }
-  .about-me {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 50%;
-    font-size: 18px;
-  }
-  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.person-section img {
+  box-shadow: 0 1px 5px #313131;
+  border-radius: 50%;
+}
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+  width: 55%;
+  font-size: 18px;
+}
+.about-me__headline {
+  padding: 20px;
+}
+.about-me__counter {
+  display: flex;
+  margin-top: 3.5rem;
+  gap: 35px;
+  flex-direction: row;
+}
