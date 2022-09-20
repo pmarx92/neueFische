@@ -31,7 +31,7 @@
 .quiz-card-bookmark {
   display: flex;
 }
-.quiz-card-bookmark a {
+.quiz-card-bookmark-Tag {
   background-color: #313131;
   color: white;
   text-decoration: none;

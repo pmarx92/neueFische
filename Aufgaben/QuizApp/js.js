@@ -6,88 +6,78 @@ const questionCardContent = [
   {
     question: 'What day is today?',
     answer: 'No'
+  },
+  {
+    question: 'What day is today?',
+    answer: 'No'
+  },
+  {
+    question: 'What day is today?',
+    answer: 'No'
   }
+
 ]
-/* Creates the Card DOM Elements */
+
 questionCardContent.forEach(question => {
-  const section = document.createElement('section');
-  const main = document.querySelector('main');
-  const questionCard = document.querySelectorAll('[data-js="questionCard"]');
-  const answerField = document.createElement('p');
+  const quizSection = document.querySelector('section');
+  const quizCard = document.createElement('div');
+  quizCard.classList.add('quiz-card');
+  quizSection.append(quizCard);
 
-  section.classList.add('quiz-section');
-  main.append(section);
+  const quizCardIcon = document.createElement('div');
+  quizCardIcon.classList.add('quiz-card-icon');
+  quizCardIcon.innerHTML = `                    <svg height="40" width="40" class="quiz-card--active" data-js="bookmark">
+<polygon points="0,0 40,0 40,40 20,20 0,40" />
+</svg>`;
+  quizCard.append(quizCardIcon);
 
-  section.innerHTML = `<div class="quiz-card">
-<div class="quiz-card-icon">
-   <svg height="40" width="40" class="quiz-card--active" data-js="bookmark">
-       <polygon points="0,0 40,0 40,40 20,20 0,40" />
-   </svg>
-</div>
-<div class="quiz-card-question" data-js="questionCard"></div>
-<button class="quiz-card-button" data-js="showAnswer">Show Answer</button>
-<div class="quiz-card-bookmark">
-   <a href="#html">#html</a>
-   <a href="#flexbox">#flexbox</a>
-   <a href="#css">#css</a>
-</div>
-</div>`
+  const quizCardQuestion = document.createElement('div');
+  quizCardQuestion.classList.add('quiz-card-question');
+  quizCard.append(quizCardQuestion);
 
-  const bookmarks = document.querySelectorAll("[data-js='bookmark']");
-  const showAnswersButton = document.querySelector('[data-js="showAnswer"]');
-
-  /* Inserts the Questions */
-  answerField.textContent = question.question;
-  answerField.classList.add('quiz-card__answer--hidden');
-  questionCard.append(answerField);
+  const theQuestion = document.createElement('p');
+  theQuestion.classList.add('quiz-card-question__headline');
+  theQuestion.innerText = question.question;
+  quizCardQuestion.append(theQuestion);
 
 
-  bookmarks.forEach((bookmark) => {
-    bookmark.addEventListener("click", () => {
-      bookmark.classList.toggle("quiz-card--active");
-    });
-  });
+  const theAnswer = document.createElement('p');
+  theAnswer.classList.add('quiz-card__answer--hidden');
+  theAnswer.innerText = question.answer;
+  quizCardQuestion.append(theAnswer);
 
-  questionCard.forEach(card => {
-    const btn = card.querySelector('button');
-    console.log(btn);
-    showAnswersButton.addEventListener("click", () => {
+  const quizCardBtn = document.createElement('button');
+  quizCardBtn.classList.add('quiz-card-button');
+  quizCardBtn.innerText = "Show Answer"
+  quizCard.append(quizCardBtn);
 
-      answerField.classList.toggle("quiz-card__answer--hidden");
+  const quizCardBookmark = document.createElement('div');
+  const aLinkHtml = document.createElement('a');
+  const aLinkFlex = document.createElement('a');
+  const aLinkCss = document.createElement('a');
 
-    });
+  quizCardBookmark.classList.add('quiz-card-bookmark');
+  aLinkHtml.classList.add('quiz-card-bookmark-Tag');
+  aLinkFlex.classList.add('quiz-card-bookmark-Tag');
+  aLinkCss.classList.add('quiz-card-bookmark-Tag');
+
+  aLinkHtml.innerText = "#html";
+  aLinkFlex.innerText = "#flexbox";
+  aLinkCss.innerText = "#css";
+
+  quizCard.append(quizCardBookmark);
+  quizCardBookmark.append(aLinkHtml);
+  quizCardBookmark.append(aLinkFlex);
+  quizCardBookmark.append(aLinkCss);
+
+  quizCardBtn.addEventListener('click', () => {
+    theAnswer.classList.toggle('quiz-card__answer--hidden');
   })
 })
 
-
-
-/* answerField.innerText = question.question;
-answerField.classList.add('quiz-card__answer--hidden');
-
-questionCard.append(answerField);
-
-showAnswersButton.forEach(button => {
-  button.addEventListener("click", () => {
-    answerField.classList.toggle("quiz-card__answer--hidden");
+const bookmarks = document.querySelectorAll('[data-js="bookmark"]');
+bookmarks.forEach((bookmark) => {
+  bookmark.addEventListener("click", () => {
+    bookmark.classList.toggle("quiz-card--active");
   });
-})
-const cardSection = document.querySelector('[data-js="cardSection"]');
-const divWrappedAround = document.createElement('div');
-
-/* ICON SECTION */
-/* cardSection.innerHTML = `< div class="quiz-card" >
-<div class="quiz-card-icon">
-   <svg height="40" width="40" class="quiz-card--active" data-js="bookmark">
-       <polygon points="0,0 40,0 40,40 20,20 0,40" />
-   </svg>
-</div>
-<div class="quiz-card-question" data-js="questionCard">
-<p class="" data-js="data-js=answer"></p>
-</div>
-<button class="quiz-card-button" data-js="showAnswer">Show Answer</button>
-<div class="quiz-card-bookmark">
-   <a href="#html">#html</a>
-   <a href="#flexbox">#flexbox</a>
-   <a href="#css">#css</a>
-</div>
-</ > ` */
+});
