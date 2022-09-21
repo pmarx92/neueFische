@@ -1,28 +1,31 @@
+import { formHandler } from "./formHandler.js";
+
 const questionCardContent = [
   {
-    question: 'What property flips the axes in flexbox...',
-    answer: 'No'
+    question: 'What property flips the axes in flexbox...1',
+    answer: 'test1'
   },
   {
-    question: 'What property flips the axes in flexbox...',
-    answer: 'No'
+    question: 'What property flips the axes in flexbox...2',
+    answer: 'test2'
   },
   {
-    question: 'What property flips the axes in flexbox...',
-    answer: 'No'
+    question: 'What property flips the axes in flexbox...3',
+    answer: 'test3'
   },
   {
-    question: 'What property flips the axes in flexbox...',
-    answer: 'No'
+    question: 'What property flips the axes in flexbox...4',
+    answer: 'test4'
   },
   {
-    question: 'What property flips the axes in flexbox...',
-    answer: 'No'
+    question: 'What property flips the axes in flexbox...5',
+    answer: 'test5'
   }
 ]
 
-export function cardCreator() {
-  questionCardContent.forEach(question => {
+
+export function cardCreator(allFormData) {
+  //questionCardContent.forEach(({ question, answer }) => {
     const quizSection = document.querySelector('section');
     const quizCard = document.createElement('div');
     quizCard.classList.add('quiz-card');
@@ -43,12 +46,12 @@ export function cardCreator() {
 
     const theQuestion = document.createElement('p');
     theQuestion.classList.add('quiz-card-question__headline');
-    theQuestion.innerText = question.question;
+    theQuestion.innerText = allFormData.yourQuestion;
     quizCardQuestion.append(theQuestion);
 
     const theAnswer = document.createElement('p');
     theAnswer.classList.add('quiz-card__answer--hidden');
-    theAnswer.innerText = question.answer;
+    theAnswer.innerText = allFormData.yourAnswer;
     quizCardQuestion.append(theAnswer);
 
     const quizCardBtn = document.createElement('button');
@@ -82,5 +85,5 @@ export function cardCreator() {
     quizCardIcon.addEventListener("click", () => {
       quizCardIcon.classList.toggle("quiz-card--active");
     });
-  })
+ // })
 }

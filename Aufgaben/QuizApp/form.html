@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
-    <script src="js.js" type="module"></script>
+    <script src="./js-components/formHandler.js" type="module"></script>
     <title>Quiz App</title>
 </head>
 
@@ -16,16 +16,16 @@
         <h1>Quiz App</h1>
     </header>
 
-    <form action="">
+    <form action="" data-js="form">
         <fieldset>
             <legend>Your Question: </legend>
-            <label for="textarea"></label>
-            <textarea class="textarea" name="textarea" id="textarea" cols="43" rows="5" placeholder="The Question..."></textarea>
+            <label for="yourQuestion"></label>
+            <textarea class="yourQuestion" name="yourQuestion" id="yourQuestion" cols="43" rows="5" placeholder="The Question..."></textarea>
         </fieldset>
         <fieldset>
             <legend>Your answer: </legend>
-            <label for="textareaTwo"></label>
-            <textarea class="textarea" name="textarea" id="textareaTwo" cols="43" rows="5" placeholder="The answer..."></textarea>
+            <label for="yourAnswer"></label>
+            <textarea class="yourAnswer" name="yourAnswer" id="yourAnswer" cols="43" rows="5" placeholder="The answer..."></textarea>
         </fieldset>
         <fieldset>
             <legend>Tags</legend>
@@ -35,7 +35,7 @@
 
         <button type="submit">Submit</button>
     </form>
-
+    <section class="quiz-section"></section>
     <footer>
         <ul class="footer-navigation">
             <a href="index.html" class="footer-navigation__link">
